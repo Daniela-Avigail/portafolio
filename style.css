@@ -67,6 +67,19 @@ nav {
   color: var(--blue-accent);
 }
 
+@media (max-width: 600px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    padding: 1.5rem 0;
+  }
+  .nav-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+  }
+}
+
 /* ROBOTCITO VOLADOR */
 .robot-flyby {
   position: relative;
@@ -97,8 +110,18 @@ nav {
 
 @media (max-width: 768px) {
   .robot-flyby {
-    display: none;
+    height: 50px;
   }
+  .robot-bot {
+    offset-path: none;
+    left: 50%;
+    animation: botMobileFloat 3s ease-in-out infinite;
+  }
+}
+
+@keyframes botMobileFloat {
+  0%, 100% { transform: translate(-50%, 0) rotate(-4deg); }
+  50% { transform: translate(-50%, -10px) rotate(4deg); }
 }
 
 @media (prefers-reduced-motion: reduce) {
