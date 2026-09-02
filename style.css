@@ -159,6 +159,7 @@ nav {
 
   /* MODIFICA ESTE NÚMERO PARA MOVER A LA DERECHA O IZQUIERDA */
   margin-left: 160px; 
+  margin-top: -50px
 }
 
 @keyframes photoGlow {
